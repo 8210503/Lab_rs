@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#0a65af"
+    android:id="@+id/title_rootlayout"
+
+    android:layout_height="50dp">
+
+    <!--标题栏-->
+    <!--左侧返回键-->
+    <ImageView
+        android:id="@+id/title_rootlayout_backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+         />
+    <!--左侧文字-->
+    <TextView
+        android:id="@+id/title_rootlayout_backTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f2efef"
+
+        android:layout_toRightOf="@id/title_rootlayout_backIv"
+        android:layout_centerVertical="true" />
+
+    <!--中间标题-->
+    <TextView
+        android:id="@+id/title_rootlayout_middleTv"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:textSize="16sp"
+        android:textColor="#f2efef"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"/>
+    <!--右侧图标-->
+    <TextView
+        android:id="@+id/title_rootlayout_rightTv"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#f2efef"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2efef"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/title_rootlayout_rightIv"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@id/title_rootlayout_backIv" />
+
+</RelativeLayout>

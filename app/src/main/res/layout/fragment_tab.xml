@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/skin_tabbar_bg"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:id="@+id/layout_see"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <ImageView
+                    android:id="@+id/image_see"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/skin_tabbar_icon_auth_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:text="信息查看"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/skin_tabbar_icon_more_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:text="信息录入"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#000"></LinearLayout>
+    </FrameLayout>
+
+    <!-- 中间按钮背景 -->
+
+    <ImageView
+        android:id="@+id/toggle_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/frameMenu"
+        android:layout_centerInParent="true"
+        />
+
+    <!-- 中间按钮 -->
+
+    <ImageView
+        android:id="@+id/plus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/frameMenu"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

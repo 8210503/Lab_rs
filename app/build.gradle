@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    /**rootProject.ext生成的是BuildConfig文件,这个也要注意一下*/
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.gft.lab_rs"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            buildConfigField "boolean", "LOG_DEBUG", "true"//todo  服务器配置
+            minifyEnabled false//todo minifyEnabled为true表示启用混淆
+            useProguard false
+//            signingConfig signingConfigs.release//todo 引用签名
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+
+        release {
+            debuggable true
+            buildConfigField "boolean", "LOG_DEBUG", "false"//todo 正式服务器配置
+            minifyEnabled false
+            useProguard true
+//            signingConfig signingConfigs.release
+//            shrinkResources true//todo   移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation  'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation  'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation ('com.github.maning0303:MNProgressHUD:V1.0.6') {
+        exclude group: 'com.android.support'
+    }
+    implementation  'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    implementation  'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'//JSON解析
+    implementation  'io.reactivex:rxandroid:1.2.1'
+    implementation  'com.contrarywind:Android-PickerView:3.2.4'
+}

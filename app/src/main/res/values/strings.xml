@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GFT实验室记录系统</string>
+    <!--侧滑菜单-->
+    <string name="global_title">GFT实验室记录系统</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open"> Drawer is opened </string>
+    <string name="drawer_close">Drawer is closed </string>
+
+    <!-- 加载状态相关 -->
+    <string name="view_empty">没有数据~</string>
+    <string name="view_network_error">网络异常~</string>
+    <string name="view_no_network">没有网络~</string>
+
+    <string name="loading">加载中</string>
+    <string name="load_success">加载成功</string>
+    <string name="load_fail">加载失败</string>
+</resources>
